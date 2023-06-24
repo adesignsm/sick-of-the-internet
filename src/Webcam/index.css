@@ -1,0 +1,14 @@
+#webcam-feed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+}
+
+#webcam-feed canvas {
+    height: 100dvh;
+    width: 100dvw;
+    opacity: 0.5;
+    filter: blur(30px);
+    mix-blend-mode: multiply;
+}

@@ -1,23 +1,20 @@
-import React, { useLayoutEffect, useState } from "react";
-import $, { data } from "jquery";
+import React, { useLayoutEffect, useState, useRef } from "react";
+import $ from "jquery";
 import "./index.css";
 
 import firebaseClient from "../firebaseClient";
 import {initializeApp} from "firebase/app";
-import { get, getDatabase, child, ref } from "firebase/database";
+import { get, getDatabase, ref } from "firebase/database";
 
 const app = initializeApp(firebaseClient);
 
-const Scene = () => {
+const Scene = ({propState}) => {
     const [userComments, setUserComments] = useState([]);
-    useLayoutEffect(() => {
-        $("#entry-prompt").delay(1000).fadeOut(300);
-        $("#canvas").delay(1700).fadeIn(500);
+    const canvasRef = useRef(null);
 
-        setTimeout(() => {
-            getDarkSecrets();
-        }, 500);
-    }, []);
+    useLayoutEffect(() => {
+        if (propState) getDarkSecrets();
+    }, [userComments]);
 
     const getDarkSecrets = () => {
         const dbRef = ref(getDatabase());
@@ -34,11 +31,16 @@ const Scene = () => {
                 setUserComments(userData);
             }
         })
+
+        $(".user-comment").each(function(index) {
+            $(this).delay(200 * index).fadeIn(500);
+        });
+          
     }
 
     return (
         <>
-            <div id="canvas">
+            <div id="canvas" className="canvas-container">
                 {userComments.map((comment, index) => {
                     return (
                         <h3 className="user-comment" key={index}> {comment} </h3>

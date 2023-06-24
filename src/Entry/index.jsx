@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 
 import firebaseClient from "../firebaseClient";
 import {initializeApp} from "firebase/app";
@@ -42,14 +43,15 @@ const Entry = () => {
     return (
         <>
             <div id="entry-prompt">
+                <h1> What is the best relationship advice you have received? </h1>
                 <form onSubmit={handleSubmit((data) => {writeToFirebase(data)})}>
-                    <input {...register('deepDarkSecret', { required: true })} required/>
+                    <input className="prompt-input" {...register('deepDarkSecret', { required: true })} required/>
+                    <input type="submit" />
                     {profanityFound && <p> Profanity detected. Please enter a different answer.</p>}
                     {submitted && <p> Thank you for your answer </p>}
-                    <input type="submit" />
                 </form>
             </div>
-            {submitted ? <Scene /> : null}
+            {submitted ? <Scene propState={submitted}/> : null}
         </>
     )
 }

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Yomogi&display=swap');
+
+body, html {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Yomogi', cursive;
+}
+
+#paper-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat;
+    background-image: url("https://img.freepik.com/free-photo/white-paper-texture_1194-2301.jpg?w=1380&t=st=1687630205~exp=1687630805~hmac=a7559f0d13ee266e87409601a81038b6f7ae5abd54caec288ba35ff33e05d2a8");
+    background-size: cover;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+#noise-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    -webkit-filter: brightness(80%);
+    filter: brightness(50%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
