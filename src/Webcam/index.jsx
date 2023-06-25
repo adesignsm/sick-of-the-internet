@@ -13,7 +13,22 @@ const Webcam = () => {
       try {
         let stream;
         if (window.innerWidth <= 767) {
-          stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          stream = await navigator.mediaDevices.getUserMedia({ 
+            audio: false,
+            video: {
+                width: {
+                  min: 1280,
+                  ideal: 1920,
+                  max: 2560,
+                },
+                height: {
+                  min: 720,
+                  ideal: 1080,
+                  max: 1440
+                },
+                facingMode: 'user'
+              }
+           });
         } else {
           stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
         }
