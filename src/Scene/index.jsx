@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import $ from "jquery";
 import "jquery-ui-bundle";
+import "jquery-ui-touch-punch";
 import "./index.css";
 
 import firebaseClient from "../firebaseClient";
