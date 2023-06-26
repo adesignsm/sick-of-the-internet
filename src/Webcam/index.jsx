@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import MobileDetect from 'mobile-detect';
 import "./index.css";
 
 import * as bodyPix from '@tensorflow-models/body-pix';
@@ -9,6 +10,8 @@ const Webcam = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    let md = new MobileDetect(navigator.userAgent);
+
     const getVideoStream = async () => {
       try {
         let stream;
@@ -53,9 +56,8 @@ const Webcam = () => {
       }
     };
 
-    if (window.innerWidth > 320 && window.innerWidth < 690) {
-      getVideoStream();
-    }
+    if (!md.mobile()) getVideoStream();
+
   }, []);
 
   return (

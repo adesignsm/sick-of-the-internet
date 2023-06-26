@@ -1,6 +1,10 @@
+import Header from "./Header";
 import Entry from "./Entry";
 import Webcam from "./Webcam";
-import Scene from "./Scene";
+
+import About from "./About";
+import Contact from "./Contact";
+
 import "./root.css";
 
 const App = () => {
@@ -9,8 +13,11 @@ const App = () => {
     }
     return (
         <>
+            <Header />
             <Webcam />
             <Entry />
+            <About />
+            <Contact />
             <div id="paper-overlay" />
             <div id="noise-overlay" />
         </>

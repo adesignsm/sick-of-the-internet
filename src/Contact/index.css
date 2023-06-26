@@ -1,0 +1,27 @@
+.contact-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contact-form-container .contact-content {
+    display: flex;
+    flex-direction:column;
+    padding: 3rem;
+    width: 25vw;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.contact-form-container .contact-content ul {
+    padding: 0;
+    list-style-type: none;
+}

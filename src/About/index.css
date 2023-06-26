@@ -1,0 +1,29 @@
+.about-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.about-container .about-content {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    padding: 3rem;
+    width: 25vw;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 690px) {
+    .about-container .about-content {
+        width: 80dvw;   
+        padding: 1rem;
+    }
+}

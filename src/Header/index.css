@@ -1,0 +1,30 @@
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    padding-left: 1rem;
+}
+
+.navigation-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    width: 96dvw;
+}
+
+.navigation-bar ul li {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 290px) and (max-width: 690px) {
+    .navigation-bar ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        width: 90dvw;
+    }
+}

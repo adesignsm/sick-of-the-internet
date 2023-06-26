@@ -46,7 +46,7 @@ const Entry = () => {
                 <h1> What is the best relationship advice you have received? </h1>
                 <form onSubmit={handleSubmit((data) => {writeToFirebase(data)})}>
                     <input className="prompt-input" {...register('deepDarkSecret', { required: true })} required/>
-                    <input type="submit" value={"Submit your advice"}/>
+                    <input type="submit" value="Submit your advice"/>
                     {profanityFound && <p> Profanity detected. Please enter a different answer.</p>}
                     {submitted && <p> Thank you for your answer </p>}
                 </form>
