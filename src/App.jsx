@@ -4,6 +4,9 @@ import Scene from "./Scene";
 import "./root.css";
 
 const App = () => {
+    window.onresize = () => {
+        console.log(window.innerWidth)
+    }
     return (
         <>
             <Webcam />
