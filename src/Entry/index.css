@@ -41,6 +41,10 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 690px) {
+    #entry-prompt {
+        width: 80dvw;
+    }
+
     #entry-prompt .prompt-input {
         width: 80dvw;
         margin-bottom: 1rem;

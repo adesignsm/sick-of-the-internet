@@ -58,5 +58,7 @@
       width: 80dvw;
       margin: 0 auto;
       position: initial;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
   }
 }
