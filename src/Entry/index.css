@@ -50,10 +50,6 @@
     }
 
     #entry-prompt input[type=submit] {
-        font-size: x-large;
-        background-color: transparent;
-        border: 1px solid #000;
-        cursor: pointer;
         padding: 1rem 2rem;
     }
 }
